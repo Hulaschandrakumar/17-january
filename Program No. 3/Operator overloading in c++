@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class Vector {
+    public:
+    int x,y;
+    Vector(){
+        x=0;
+        y=0;
+    }
+    void input(int a, int b){
+        x=a;
+        y=b;
+    }
+     Vector operator + (const Vector& v) const{
+         return Vector (x + v.x, y + v.y);
+    }
+    void print(){
+        cout<<"\n "<<x<<" "<<y;
+    }
+};
+int main(){
+    Vector v1;
+    Vector v2;
+    v1.input(9,8);
+    v1.print();
+    v2.input(19,19);
+    v2.print();
+    Vector v3 = v1 + v2;
+    v3.print();
+}
