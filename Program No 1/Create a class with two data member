@@ -1,0 +1,36 @@
+/*
+1.) Create a class with two data member (One is integer type and second is flote type)
+Create default constructor to assign both value as zero and define or declare two 
+member function with same name but different parameters(int type, flote type) use
+ these function to asssign to the data member respectively
+*/
+#include <iostream>
+using namespace std;
+ 
+class construct
+{
+public:
+    float area;
+    construct()
+    {   
+        int a=0;
+        int b=0;
+        area = 0;
+    }
+    construct(int a, int b)
+    {
+        area = a * b;
+    }
+    void disp()
+    {
+        cout<< area<< endl;
+    }
+};
+int main()
+{
+    construct o;
+    construct o2( 10, 20);
+    o.disp();
+    o2.disp();
+    return 1;
+}
